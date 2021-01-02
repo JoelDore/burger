@@ -1,0 +1,27 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "Restaurant app allowing users to order and eat burgers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelDore/burger.git"
+  },
+  "author": "JoelDore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoelDore/burger/issues"
+  },
+  "homepage": "https://github.com/JoelDore/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
