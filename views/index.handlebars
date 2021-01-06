@@ -11,7 +11,7 @@
             <div class="card my-2">
                 <div class="card-body p-2 px-3 d-flex justify-content-between align-items-center">
                     <span><strong>{{this.id}}.</strong> {{this.burgers_name}} </span>
-                    <button class="btn btn-sm btn-success" type="button" id="update{{this.id}}"
+                    <button class="btn btn-sm btn-success" type="button" id="devour{{this.id}}"
                         value="{{this.id}}">Devour</button>
                 </div>
             </div>
@@ -32,11 +32,13 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-12 text-center">
-            <p>Enter a burger you want to eat</p>
-            <textarea id="newBurger" cols="30" rows="2" style="resize:none"></textarea>
-            <br>
-            <button class="btn btn-primary" type="button" id="submitBurger">Submit</button>
+        <div class="col-8 mx-auto text-center">
+            <form action="/index/add" method="POST" class="border-dark">
+                <p>Enter a burger you want to eat</p>
+                <input type="text" name="burgerName" id="burgerName">
+                <hr>
+                <button class="btn btn-primary" type="submit" id="submitBurger">Submit</button>
+            </form>
         </div>
     </div>
 </div>
