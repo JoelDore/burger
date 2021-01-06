@@ -28,7 +28,7 @@ router.post('/index/add', (req, res) => {
 router.put('/index/devour/:id', (req, res) => {
     burger.devourBurger(req.params.id, response => {
         console.log(response)
-        res.redirect('/index')
+        res.end()
     })
 })
 
