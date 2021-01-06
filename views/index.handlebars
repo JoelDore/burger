@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <img src="/assets/img/burger.png" alt="Burger" width="150px">
+        <h1 class="mt-0">Burger Time!</h1>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-6 p-2 px-3 text-center bg-warning border rounded">
+            {{#each data}}
+            {{#unless this.devoured}}
+            <div class="card my-2">
+                <div class="card-body p-2 px-3 d-flex justify-content-between align-items-center">
+                    <span><strong>{{this.id}}.</strong> {{this.burgers_name}} </span>
+                    <button class="btn btn-sm btn-success" type="button" id="update{{this.id}}"
+                        value="{{this.id}}">Devour</button>
+                </div>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="col-6 p-2 text-center bg-warning border rounded">
+            <h3>Devoured Burgers</h3>
+            {{#each data}}
+            {{#if this.devoured}}
+            <div class="list-item text-muted">
+                <del>{{this.burgers_name}}</del>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>Enter a burger you want to eat</p>
+            <textarea id="newBurger" cols="30" rows="2" style="resize:none"></textarea>
+            <br>
+            <button class="btn btn-primary" type="button" id="submitBurger">Submit</button>
+        </div>
+    </div>
+</div>
