@@ -12,7 +12,7 @@ const burger = {
 
     // Set 'devoured' to true (by id)
     devourBurger(id, cb) {
-        orm.updateOne('burgers', id, 'devoured', true, cb)
+        orm.updateOne('burgers', id, 'devoured', 1, cb)
     }
 }
 

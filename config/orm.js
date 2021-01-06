@@ -30,7 +30,7 @@ const orm = {
     updateOne(tableName, id, columnName, newValue, cb) {
         // UPDATE {table} SET {column} = {value}
         // WHERE id = {id}
-        let query = `UPDATE ${tableName} SET ${columnName} = '${newValue}'`
+        let query = `UPDATE ${tableName} SET ${columnName} = ${newValue} `
         query += `WHERE id = ${id};`
 
         connection.query(query, (err, res) => {
