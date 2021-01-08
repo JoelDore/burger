@@ -4,6 +4,7 @@
   "description": "Restaurant app allowing users to order and eat burgers",
   "main": "server.js",
   "scripts": {
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
